@@ -1,15 +1,11 @@
 language: python
 python:
-- 3.6
-- 3.5
-- 3.4
-- 2.7
-matrix:
-  include:
-  - python: 2.7
-    env: TOXENV=quality
+  - 3.8
+  - 3.6
+  - 3.5
+  - 3.4
 install:
-- pip install -U tox-travis
+- pip install -r requirements/travis.txt
 script:
 - tox
 after_success:
